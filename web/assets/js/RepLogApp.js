@@ -2,10 +2,11 @@
 
 const Helper = require('./RepLogAppHelper');
 const $ = require('jquery');
+const swal = require('sweetalert2');
 require('popper.js');
 require('bootstrap');
 
-(function(window, Routing, swal) {
+(function(window, Routing) {
 
     let HelperInstances = new WeakMap();
 
@@ -216,4 +217,4 @@ require('bootstrap');
 `;
 
     window.RepLogApp = RepLogApp;
-})(window, Routing, swal);
+})(window, Routing);
