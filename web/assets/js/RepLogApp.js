@@ -1,8 +1,11 @@
 'use strict';
 
 const Helper = require('./RepLogAppHelper');
+const $ = require('jquery');
+require('popper.js');
+require('bootstrap');
 
-(function(window, $, Routing, swal) {
+(function(window, Routing, swal) {
 
     let HelperInstances = new WeakMap();
 
@@ -213,4 +216,4 @@ const Helper = require('./RepLogAppHelper');
 `;
 
     window.RepLogApp = RepLogApp;
-})(window, jQuery, Routing, swal);
+})(window, Routing, swal);
