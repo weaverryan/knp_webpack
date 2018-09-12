@@ -6,6 +6,9 @@ const swal = require('sweetalert2');
 require('popper.js');
 require('bootstrap');
 
+// Import sweetalert CSS here.
+require('sweetalert2/dist/sweetalert2.css');
+
 let HelperInstances = new WeakMap();
 
 class RepLogApp {
