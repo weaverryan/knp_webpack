@@ -3,8 +3,6 @@
 const Helper = require('./RepLogAppHelper');
 const $ = require('jquery');
 const swal = require('sweetalert2');
-require('popper.js');
-require('bootstrap');
 
 // Import sweetalert CSS here.
 require('sweetalert2/dist/sweetalert2.css');

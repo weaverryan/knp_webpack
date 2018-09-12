@@ -1,10 +1,10 @@
 'use strict';
 const $ = require('jquery');
-require('popper.js');
-require('bootstrap');
+
+require('bootstrap-sass');
 
 // Import bootstrap CSS here.
-require('bootstrap/dist/css/bootstrap.css');
+require('bootstrap-sass/assets/stylesheets/_bootstrap.scss');
 
 // Import fontawesome CSS here.
 require('font-awesome/css/font-awesome.css');
