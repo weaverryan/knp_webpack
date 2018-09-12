@@ -3,12 +3,6 @@ const $ = require('jquery');
 
 require('bootstrap-sass');
 
-// Import bootstrap CSS here.
-require('bootstrap-sass/assets/stylesheets/_bootstrap.scss');
-
-// Import fontawesome CSS here.
-require('font-awesome/css/font-awesome.css');
-
 // Add babel polyfill on every page to ensure we can
 // use Promise.
 require('@babel/polyfill');

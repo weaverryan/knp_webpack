@@ -42,7 +42,8 @@ module.exports = {
                 use: [
                     "style-loader", // creates style nodes from JS strings
                     "css-loader", // translates CSS into CommonJS
-                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
+                    "resolve-url-loader", // solves problem with assets referenced via url() in deep libs
+                    "sass-loader?sourceMap" // compiles Sass to CSS, using Node Sass by default
                 ]
             },
             {
