@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: {
@@ -67,7 +68,10 @@ module.exports = {
             // const jQuery = require('jquery')
             jQuery: 'jquery',
             $: 'jquery'
+        }),
 
-        })
+        new CopyWebpackPlugin([
+            { from: './assets/static', to: './static' } ]
+        )
     ]
 };
