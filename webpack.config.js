@@ -9,7 +9,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'web', 'build'),
-        filename: '[name].js'
+        filename: '[name].js',
+        publicPath: '/build/' // used by file rewrites by file-loader
     },
     module: {
         rules: [
@@ -33,6 +34,12 @@ module.exports = {
                                     // element of the document
                     'css-loader' // converts styles to js array
                                  // then send it to style-loader
+                ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
                 ]
             }
         ]

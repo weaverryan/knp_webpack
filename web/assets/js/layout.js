@@ -10,6 +10,9 @@ require('@babel/polyfill');
 const css = require('../css/login.css');
 console.log(css);
 
+// Import global CSS here.
+require('../css/main.css');
+
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
