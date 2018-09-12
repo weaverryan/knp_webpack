@@ -17,7 +17,7 @@ const css = require('../css/login.css');
 console.log(css);
 
 // Import global CSS here.
-require('../css/main.css');
+require('../css/main.scss');
 
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
