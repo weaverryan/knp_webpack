@@ -11,6 +11,6 @@
     "webpack-cli": "^3.1.0"
   },
   "scripts": {
-    "webpack": "./node_modules/webpack/bin/webpack.js ./web/assets/js/RepLogApp.js -o ./web/build/rep_log.js"
+    "webpack": "./node_modules/.bin/webpack"
   }
 }
