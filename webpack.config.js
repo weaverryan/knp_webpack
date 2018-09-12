@@ -14,7 +14,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /.js$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -22,6 +22,18 @@ module.exports = {
                         cacheDirectory: true
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                // Read loaders from right to left,
+                // i.e. bottom to top
+                use: [
+                    'style-loader', // inject recieved js array data
+                                    // on styles into <head> <style>
+                                    // element of the document
+                    'css-loader' // converts styles to js array
+                                 // then send it to style-loader
+                ]
             }
         ]
     },

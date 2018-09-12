@@ -7,6 +7,9 @@ require('bootstrap');
 // use Promise.
 require('@babel/polyfill');
 
+const css = require('../css/login.css');
+console.log(css);
+
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
