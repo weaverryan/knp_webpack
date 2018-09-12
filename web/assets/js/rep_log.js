@@ -1,5 +1,5 @@
 const $ = require('jquery');
-const RepLogApp = require('./components/RepLogApp');
+const RepLogApp = require('babel-loader!./components/RepLogApp');
 
 $(document).ready(function() {
     var $wrapper = $('.js-rep-log-table');
