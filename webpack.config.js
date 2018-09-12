@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -9,5 +10,15 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'web', 'build'),
         filename: '[name].js'
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            // whenever some code uses jQuery.someMethod()
+            // and jQuery is unknown, it hoists
+            // const jQuery = require('jquery')
+            jQuery: 'jquery',
+            $: 'jquery'
+
+        })
+    ]
 };
