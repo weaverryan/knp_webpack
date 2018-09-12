@@ -5,5 +5,8 @@
   "repository": "git@github.com:knpuniversity/javascript.git",
   "author": "Ryan Weaver <ryan@thatsquality.com>",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {},
+  "dependencies": {
+    "webpack": "^4.18.0"
+  }
 }
