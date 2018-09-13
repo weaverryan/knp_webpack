@@ -4,17 +4,23 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const styleLoader = {
     loader: 'style-loader',
-    options: {}
+    options: {
+        sourceMap: true
+    }
 };
 
 const cssLoader = {
     loader: 'css-loader',
-    options: {}
+    options: {
+        sourceMap: true
+    }
 };
 
 const resolveUrlLoader = {
     loader: 'resolve-url-loader',
-    options: {}
+    options: {
+        sourceMap: true
+    }
 };
 
 const sassLoader = {
