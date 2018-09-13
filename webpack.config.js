@@ -98,5 +98,6 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: './assets/static', to: './static' } ]
         )
-    ]
+    ],
+    devtool: 'inline-source-map' // activate source maps for js
 };
