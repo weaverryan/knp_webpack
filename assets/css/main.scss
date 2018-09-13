@@ -1,8 +1,6 @@
-$brand-primary: darken(#428bca, 2.5%); // #3885c7
 
-// Import bootstrap SCSS instead of CSS
-// to be able to override variables.
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+// Only import things you need from bootstrap.
+@import "./bootstrap";
 @import "~font-awesome/scss/font-awesome";
 
 .main-content {
