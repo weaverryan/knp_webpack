@@ -98,7 +98,11 @@ module.exports = {
             // and jQuery is unknown, it hoists
             // const jQuery = require('jquery')
             jQuery: 'jquery',
-            $: 'jquery'
+            $: 'jquery',
+            'window.jQuery': 'jquery', // same issue if legacy lib uses window.jQuery
+            'window.$': 'jquery' // same issue if legacy lib uses window.$
+            // GOTCHA: will rewrite any of you own code that tries to
+            // expose jQuery globally via window.$ = $.
         }),
 
         new CopyWebpackPlugin([

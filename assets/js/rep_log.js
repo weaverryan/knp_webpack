@@ -6,7 +6,12 @@ require('bootstrap-sass');
 
 // Expose bootstrap decorated jQuery object globally
 // to support legacy code.
-window.$ = $;
+// GOTCHA: ProvidePlugin will rewrite any of you own code that tries to
+// expose jQuery globally via `window.$ = $` if
+// `'window.jQuery': 'jquery'` is set in options.
+// Use `global.$ = $` instead.
+// window.$ = $; // THIS WILL BREAK
+global.$ = $;
 
 $(document).ready(function() {
     var $wrapper = $('.js-rep-log-table');
