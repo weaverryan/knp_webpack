@@ -43,6 +43,7 @@ module.exports = {
         login: './assets/js/login.js',
         layout: './assets/js/layout.js'
     },
+    mode: 'development', // change to proudction for a production build
     output: {
         path: path.resolve(__dirname, 'web', 'build'),
         filename: '[name].js',
