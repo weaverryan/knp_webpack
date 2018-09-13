@@ -2,6 +2,35 @@ const path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+const styleLoader = {
+    loader: 'style-loader',
+    options: {}
+};
+
+const cssLoader = {
+    loader: 'css-loader',
+    options: {}
+};
+
+const resolveUrlLoader = {
+    loader: 'resolve-url-loader',
+    options: {}
+};
+
+const sassLoader = {
+    loader: 'sass-loader',
+    options: {
+        sourceMap: true
+    }
+};
+
+const fileLoader = {
+    loader: 'file-loader',
+    options: {
+        name: '[name]-[hash:6].[ext]'
+    }
+};
+
 module.exports = {
     entry: {
         rep_log: './assets/js/rep_log.js',
@@ -30,42 +59,29 @@ module.exports = {
                 // Read loaders from right to left,
                 // i.e. bottom to top
                 use: [
-                    'style-loader', // inject recieved js array data
-                                    // on styles into <head> <style>
-                                    // element of the document
-                    'css-loader' // converts styles to js array
-                                 // then send it to style-loader
+                    styleLoader,
+                    cssLoader
                 ]
             },
             {
                 test: /\.scss$/,
                 use: [
-                    "style-loader", // creates style nodes from JS strings
-                    "css-loader", // translates CSS into CommonJS
-                    "resolve-url-loader", // solves problem with assets referenced via url() in deep libs
-                    "sass-loader?sourceMap" // compiles Sass to CSS, using Node Sass by default
+                    styleLoader,
+                    cssLoader,
+                    resolveUrlLoader,
+                    sassLoader
                 ]
             },
             {
                 test: /\.(png|svg|jpg|gif|ico|jpeg)$/,
                 use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name]-[hash:6].[ext]'
-                        }
-                    }
+                    fileLoader
                 ]
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name]-[hash:6].[ext]'
-                        }
-                    }
+                    fileLoader
                 ]
             }
         ]
